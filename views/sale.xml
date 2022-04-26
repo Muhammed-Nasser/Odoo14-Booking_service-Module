@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <!-- add is_booking field in order form view -->
+        <record id="sales_order_form_inherit" model="ir.ui.view">
+            <field name="name">sales.order.inherited</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_information']" position="inside">
+                    <group string="Booking">
+                        <group>
+                            <field name="is_booking"/>
+                            <field name="team_id2" attrs="{'invisible':[('is_booking','=',False)]}"/>
+                            <field name="team_leader" attrs="{'invisible':[('is_booking','=',False)]}"/>
+                            <field name="employee_ids" widget="many2many_tags" attrs="{'invisible':[('is_booking','=',False)]}"/>
+                            <field name="equipment_ids" widget="many2many_tags" attrs="{'invisible':[('is_booking','=',False)]}"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

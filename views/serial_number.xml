@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <!-- add new fields in serial_number form-->
+        <record id="view_serial_number_inherit" model="ir.ui.view">
+            <field name="name">stock.production.lot.inherited</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.view_production_lot_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                    <button name="action_open_event" type="object"
+                            class="oe_stat_button" icon="fa-calendar">
+                        <div class="o_stat_info">
+                            <field name="events_count" class="o_stat_value"/>
+                            <span class="o_stat_text">Events</span>
+                        </div>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+
+
+        <!-- tree view Main UI -->
+        <record id="booking_service_team_tree" model="ir.ui.view">
+            <field name="name">booking.team.tree</field>
+            <field name="model">booking.team</field>
+            <field name="arch" type="xml">
+                <tree multi_edit="1" expand="1">
+                    <field name="name"/>
+                    <field name="team_leader"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- form view to create or edit -->
+        <record id="booking_service_team_form" model="ir.ui.view">
+            <field name="name">booking.team.form</field>
+            <field name="model">booking.team</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+
+                            <group>
+                                <field name="name"/>
+                                <field name="team_leader"/>
+                                <field name="employee_ids" widget="many2many_tags"/>
+                                <field name="equipment_ids" widget="many2many_tags"/>
+                            </group>
+
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
+
+        <!--Actions | patient -->
+        <record id="booking_service_team_action" model="ir.actions.act_window">
+            <field name="name">Team</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">booking.team</field>
+            <field name="view_mode">tree,form</field>
+            <!-- add default group by value in main view | add more than value using ,'search_default_patient_name': 1 -->
+            <!-- add default Filter value in main view | add more than value using ,'search_default_patient_name': 1 -->
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Team!
+                </p>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

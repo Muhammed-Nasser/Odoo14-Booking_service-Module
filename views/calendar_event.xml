@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <!-- add new fields in product form-->
+        <record id="view_calendar_event_inherit" model="ir.ui.view">
+            <field name="name">calendar.event.inherited</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_title')]" position="inside">
+                    <label for="equipments_ids" string="Equipments"/>
+                        <h2>
+                            <field name="equipments_ids"  widget="many2many_tags" placeholder="Select attendees..."/>
+                        </h2>
+
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

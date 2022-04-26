@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+
+        <!-- add New Parent menu in sale module-->
+        <menuitem
+                id="sales_booking_service_menu"
+                name="Booking"
+                parent="sale.sale_menu_root"
+                sequence="1"/>
+
+        <!-- add Booking Order to Booking dropdown menu in sale module-->
+        <menuitem
+                id="sales_booking_order"
+                name="Booking Order"
+                parent="sales_booking_service_menu"
+                action="sales_team.crm_team_salesteams_act"
+                sequence="1"/>
+
+       <!-- add Work Order to Booking dropdown menu in sale module-->
+        <menuitem
+                id="sales_booking_work_order"
+                name="Work Order"
+                parent="sales_booking_service_menu"
+                action="sales_team.crm_team_salesteams_act"
+                sequence="2"/>
+
+        <!-- add Team to Booking dropdown menu in sale module-->
+        <menuitem
+                id="sales_booking_team"
+                name="Team"
+                parent="sales_booking_service_menu"
+                action="booking_service.booking_service_team_action"
+                groups="sales_team.group_sale_manager"
+                sequence="3"/>
+    </data>
+</odoo>

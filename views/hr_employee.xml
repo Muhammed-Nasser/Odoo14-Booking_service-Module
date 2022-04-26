@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <!-- add new fields in hr_employee form-->
+        <record id="view_hr_employee_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.inherited</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                    <button name="action_open_event" type="object"
+                            class="oe_stat_button" icon="fa-calendar">
+                        <div class="o_stat_info">
+                            <field name="events_count" class="o_stat_value"/>
+                            <span class="o_stat_text">Events</span>
+                        </div>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
