@@ -6,7 +6,7 @@ class ProductTemplate(models.Model):
     _inherit = 'hr.employee'
 
     events_count = fields.Integer(string='Events', compute='_compute_vents_count')
-    team_id = fields.Many2one('booking.team')
+    team_id1 = fields.Many2one('booking.team')
 
     def _compute_vents_count(self):
         for rec in self:

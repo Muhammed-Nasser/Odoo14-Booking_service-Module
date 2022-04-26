@@ -29,7 +29,6 @@
                                 <field name="equipment_ids" widget="many2many_tags"/>
                             </group>
 
-
                     </sheet>
                 </form>
             </field>
@@ -38,7 +37,7 @@
 
 
 
-        <!--Actions | patient -->
+        <!--Actions | team -->
         <record id="booking_service_team_action" model="ir.actions.act_window">
             <field name="name">Team</field>
             <field name="type">ir.actions.act_window</field>

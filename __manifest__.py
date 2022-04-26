@@ -22,8 +22,9 @@
         'views/hr_employee.xml',
         'views/serial_number.xml',
         'views/team_view.xml',
-        'views/menu.xml',
         'views/sale.xml',
+        'views/booking_order.xml',
+        'views/menu.xml',
 
     ],
     'demo': [],

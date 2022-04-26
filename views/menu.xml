@@ -13,7 +13,7 @@
                 id="sales_booking_order"
                 name="Booking Order"
                 parent="sales_booking_service_menu"
-                action="sales_team.crm_team_salesteams_act"
+                action="booking_service.booking_order_action"
                 sequence="1"/>
 
        <!-- add Work Order to Booking dropdown menu in sale module-->
@@ -21,7 +21,7 @@
                 id="sales_booking_work_order"
                 name="Work Order"
                 parent="sales_booking_service_menu"
-                action="sales_team.crm_team_salesteams_act"
+                action="booking_service.booking_order_action"
                 sequence="2"/>
 
         <!-- add Team to Booking dropdown menu in sale module-->
