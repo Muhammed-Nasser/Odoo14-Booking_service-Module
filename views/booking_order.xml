@@ -2,11 +2,11 @@
     <data>
 
         <!-- override sales_orders action to view un_booking_orders only-->
-       <record id="sale.action_orders" model="ir.actions.act_window">
+        <record id="sale.action_orders" model="ir.actions.act_window">
             <field name="domain">[('is_booking', '=', False)]</field>
-       </record>
+        </record>
         <!-- action to view booking_orders-->
-       <record id="booking_order_action" model="ir.actions.act_window">
+        <record id="booking_order_action" model="ir.actions.act_window">
             <field name="name">Booking Orders</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">sale.order</field>

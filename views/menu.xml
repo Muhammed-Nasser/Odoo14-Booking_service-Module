@@ -16,7 +16,7 @@
                 action="booking_service.booking_order_action"
                 sequence="1"/>
 
-       <!-- add Work Order to Booking dropdown menu in sale module-->
+        <!-- add Work Order to Booking dropdown menu in sale module-->
         <menuitem
                 id="sales_booking_work_order"
                 name="Work Order"

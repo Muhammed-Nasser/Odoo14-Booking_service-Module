@@ -10,7 +10,7 @@ class ProductTemplate(models.Model):
 
     def _compute_vents_count(self):
         for rec in self:
-            num = rec.env['calendar.event'].search_count([('partner_ids', '=', rec.id )])
+            num = rec.env['calendar.event'].search_count([('partner_ids', '=', rec.id)])
             rec.events_count = num
             print(num)
 

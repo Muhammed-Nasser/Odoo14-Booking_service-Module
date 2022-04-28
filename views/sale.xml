@@ -13,16 +13,23 @@
                         </group>
                     </group>
                 </xpath>
+                <xpath expr="//button[@name='action_confirm']" position="after">
+                    <button name="check_action" type="object" string="Check" class="btn-success"
+                            attrs="{'invisible':[('is_booking','=',False)]}"/>
+                    <button name="%(create_event_wizard_action)d"
+                            string="Validate" class="btn-success"
+                            type="action" attrs="{'invisible':[('is_booking','=',False)]}"/>
+                </xpath>
                 <xpath expr="//group[@name='sale_header']" position="inside">
                     <group string="Booking Details">
-
-                            <field name="team_id2" attrs="{'invisible':[('is_booking','=',False)]}"/>
-                            <field name="team_leader" attrs="{'invisible':[('is_booking','=',False)]}"/>
-                            <field name="employee_ids" widget="many2many_tags" attrs="{'invisible':[('is_booking','=',False)]}"/>
-                            <field name="equipment_ids" widget="many2many_tags" attrs="{'invisible':[('is_booking','=',False)]}"/>
-                            <field name="booking_start" attrs="{'invisible':[('is_booking','=',False)]}"/>
-                            <field name="booking_end" attrs="{'invisible':[('is_booking','=',False)]}"/>
-
+                        <field name="team_id2" attrs="{'invisible':[('is_booking','=',False)]}"/>
+                        <field name="team_leader" attrs="{'invisible':[('is_booking','=',False)]}"/>
+                        <field name="employee_ids" widget="many2many_tags"
+                               attrs="{'invisible':[('is_booking','=',False)]}"/>
+                        <field name="equipment_ids" widget="many2many_tags"
+                               attrs="{'invisible':[('is_booking','=',False)]}"/>
+                        <field name="booking_start" attrs="{'invisible':[('is_booking','=',False)]}"/>
+                        <field name="booking_end" attrs="{'invisible':[('is_booking','=',False)]}"/>
                     </group>
                 </xpath>
             </field>

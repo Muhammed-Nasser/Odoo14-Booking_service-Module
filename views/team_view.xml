@@ -21,20 +21,17 @@
             <field name="arch" type="xml">
                 <form>
                     <sheet>
-
-                            <group>
-                                <field name="name"/>
-                                <field name="team_leader"/>
-                                <field name="employee_ids" widget="many2many_tags"/>
-                                <field name="equipment_ids" widget="many2many_tags"/>
-                            </group>
+                        <group>
+                            <field name="name"/>
+                            <field name="team_leader"/>
+                            <field name="employee_ids" widget="many2many_tags"/>
+                            <field name="equipment_ids" widget="many2many_tags"/>
+                        </group>
 
                     </sheet>
                 </form>
             </field>
         </record>
-
-
 
 
         <!--Actions | team -->
@@ -43,8 +40,6 @@
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">booking.team</field>
             <field name="view_mode">tree,form</field>
-            <!-- add default group by value in main view | add more than value using ,'search_default_patient_name': 1 -->
-            <!-- add default Filter value in main view | add more than value using ,'search_default_patient_name': 1 -->
             <field name="context">{}</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">

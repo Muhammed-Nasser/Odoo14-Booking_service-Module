@@ -8,9 +8,9 @@
             <field name="arch" type="xml">
                 <xpath expr="//div[hasclass('oe_title')]" position="inside">
                     <label for="equipments_ids" string="Equipments"/>
-                        <h2>
-                            <field name="equipments_ids"  widget="many2many_tags" placeholder="Select attendees..."/>
-                        </h2>
+                    <h2>
+                        <field name="equipments_ids" widget="many2many_tags" placeholder="Select attendees..."/>
+                    </h2>
 
                 </xpath>
             </field>

@@ -17,6 +17,7 @@
     'data': [
         # orders security => data => wizard => views => report
         'security/ir.model.access.csv',
+        'wizard/create_event_wizard.xml',
         'views/product.xml',
         'views/calendar_event.xml',
         'views/hr_employee.xml',
